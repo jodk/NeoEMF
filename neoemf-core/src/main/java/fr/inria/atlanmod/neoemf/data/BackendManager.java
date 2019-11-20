@@ -12,10 +12,9 @@ import org.atlanmod.commons.annotation.Singleton;
 import org.atlanmod.commons.annotation.Static;
 import org.atlanmod.commons.concurrent.MoreThreads;
 
+import javax.annotation.Nonnull;
 import java.util.LinkedHashSet;
 import java.util.Set;
-
-import javax.annotation.Nonnull;
 
 /**
  * The manager of {@link Backend} instances. All registered {@link Backend}s will be automatically closed when the

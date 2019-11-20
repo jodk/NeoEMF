@@ -10,7 +10,6 @@ package fr.inria.atlanmod.neoemf.data;
 
 import fr.inria.atlanmod.neoemf.config.Config;
 import fr.inria.atlanmod.neoemf.config.ImmutableConfig;
-
 import org.eclipse.emf.common.util.URI;
 
 import javax.annotation.MatchesPattern;

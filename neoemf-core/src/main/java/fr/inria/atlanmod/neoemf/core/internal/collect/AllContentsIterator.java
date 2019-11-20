@@ -10,14 +10,13 @@ package fr.inria.atlanmod.neoemf.core.internal.collect;
 
 import org.eclipse.emf.common.util.TreeIterator;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.ArrayDeque;
 import java.util.Collections;
 import java.util.Deque;
 import java.util.Iterator;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
 
 import static java.util.Objects.nonNull;
 

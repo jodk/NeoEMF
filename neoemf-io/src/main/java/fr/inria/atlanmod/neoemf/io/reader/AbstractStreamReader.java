@@ -9,14 +9,12 @@
 package fr.inria.atlanmod.neoemf.io.reader;
 
 import fr.inria.atlanmod.neoemf.core.Id;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyElement;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyAttribute;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyClass;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyPackage;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyValue;
-
+import fr.inria.atlanmod.neoemf.io.proxy.*;
 import org.atlanmod.commons.primitive.Strings;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,13 +24,7 @@ import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
-
-import static org.atlanmod.commons.Preconditions.checkArgument;
-import static org.atlanmod.commons.Preconditions.checkNotNull;
-import static org.atlanmod.commons.Preconditions.checkState;
+import static org.atlanmod.commons.Preconditions.*;
 
 /**
  * An abstract {@link Reader} that reads data from an {@link InputStream}.

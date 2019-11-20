@@ -10,7 +10,6 @@ package fr.inria.atlanmod.neoemf.data.store.adapter;
 
 import fr.inria.atlanmod.neoemf.core.Id;
 import fr.inria.atlanmod.neoemf.core.PersistentEObject;
-
 import org.atlanmod.commons.function.Converter;
 
 import javax.annotation.Nonnull;

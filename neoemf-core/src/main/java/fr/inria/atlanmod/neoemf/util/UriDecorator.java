@@ -11,11 +11,10 @@ package fr.inria.atlanmod.neoemf.util;
 
 import org.eclipse.emf.common.util.URI;
 
-import java.util.List;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.List;
 
 /**
  * A {@link URI} wrapper that delegates all methods to an internal {@link URI}.

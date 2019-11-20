@@ -10,24 +10,16 @@ package fr.inria.atlanmod.neoemf.io.writer;
 
 import fr.inria.atlanmod.neoemf.core.Id;
 import fr.inria.atlanmod.neoemf.io.Handler;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyElement;
 import fr.inria.atlanmod.neoemf.io.proxy.ProxyAttribute;
+import fr.inria.atlanmod.neoemf.io.proxy.ProxyElement;
 import fr.inria.atlanmod.neoemf.io.proxy.ProxyReference;
-
 import org.atlanmod.commons.log.Log;
-
-import java.io.IOException;
-import java.util.ArrayDeque;
-import java.util.Collections;
-import java.util.Deque;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
 
 import javax.annotation.Nonnull;
 import javax.annotation.OverridingMethodsMustInvokeSuper;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.io.IOException;
+import java.util.*;
 
 import static org.atlanmod.commons.Preconditions.checkEqualTo;
 import static org.atlanmod.commons.Preconditions.checkNotNull;

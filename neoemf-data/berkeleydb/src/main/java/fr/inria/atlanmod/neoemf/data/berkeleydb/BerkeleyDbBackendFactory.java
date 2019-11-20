@@ -11,24 +11,19 @@ package fr.inria.atlanmod.neoemf.data.berkeleydb;
 import com.sleepycat.je.DatabaseConfig;
 import com.sleepycat.je.Environment;
 import com.sleepycat.je.EnvironmentConfig;
-
 import fr.inria.atlanmod.neoemf.data.AbstractBackendFactory;
 import fr.inria.atlanmod.neoemf.data.Backend;
-import fr.inria.atlanmod.neoemf.data.BackendFactory;
 import fr.inria.atlanmod.neoemf.data.berkeleydb.config.BerkeleyDbConfig;
-
-import org.osgi.service.component.annotations.Component;
-
-import java.nio.file.Files;
-import java.nio.file.Path;
 
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 /**
  * A {@link fr.inria.atlanmod.neoemf.data.BackendFactory} that creates {@link BerkeleyDbBackend} instances.
  */
-@Component(service = BackendFactory.class)
+
 @ParametersAreNonnullByDefault
 public class BerkeleyDbBackendFactory extends AbstractBackendFactory<BerkeleyDbConfig> {
 

@@ -12,7 +12,6 @@ import fr.inria.atlanmod.neoemf.core.Id;
 import fr.inria.atlanmod.neoemf.data.bean.ClassBean;
 import fr.inria.atlanmod.neoemf.data.bean.ManyFeatureBean;
 import fr.inria.atlanmod.neoemf.data.bean.SingleFeatureBean;
-
 import org.atlanmod.commons.annotation.Singleton;
 import org.atlanmod.commons.annotation.Static;
 import org.atlanmod.commons.io.serializer.BinarySerializer;

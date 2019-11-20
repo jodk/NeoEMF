@@ -10,17 +10,14 @@ package fr.inria.atlanmod.neoemf.data.blueprints.internal.graph;
 
 import com.tinkerpop.blueprints.Direction;
 import com.tinkerpop.blueprints.Edge;
-
 import fr.inria.atlanmod.neoemf.core.Id;
 import fr.inria.atlanmod.neoemf.data.blueprints.internal.graph.wrapper.IdEdge;
-
 import org.atlanmod.commons.LazyInt;
-
-import java.util.function.IntUnaryOperator;
 
 import javax.annotation.Nonnegative;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.function.IntUnaryOperator;
 
 /**
  * An {@link com.tinkerpop.blueprints.Edge} representing the relation between an element and another.

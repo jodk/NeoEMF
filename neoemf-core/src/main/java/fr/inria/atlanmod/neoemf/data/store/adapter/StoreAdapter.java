@@ -13,7 +13,6 @@ import fr.inria.atlanmod.neoemf.core.PersistentEObject;
 import fr.inria.atlanmod.neoemf.data.Saveable;
 import fr.inria.atlanmod.neoemf.data.bean.ClassBean;
 import fr.inria.atlanmod.neoemf.data.store.Store;
-
 import org.atlanmod.commons.Copiable;
 import org.atlanmod.commons.Throwables;
 import org.eclipse.emf.ecore.EClass;
@@ -22,15 +21,13 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.resource.Resource;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.Optional;
-
 import javax.annotation.Nonnegative;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import javax.annotation.concurrent.Immutable;
+import java.util.Collection;
+import java.util.List;
 
 /**
  * An adapter that adapts and translates EMF requests from an {@link InternalEObject.EStore} to a {@link Store}.

@@ -10,15 +10,14 @@ package fr.inria.atlanmod.neoemf.core.internal.collect;
 
 import org.atlanmod.commons.LazyInt;
 
+import javax.annotation.Nonnegative;
+import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.function.IntSupplier;
-
-import javax.annotation.Nonnegative;
-import javax.annotation.Nonnull;
-import javax.annotation.ParametersAreNonnullByDefault;
 
 import static org.atlanmod.commons.Preconditions.checkState;
 

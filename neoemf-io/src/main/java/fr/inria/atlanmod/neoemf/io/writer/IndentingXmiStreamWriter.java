@@ -10,6 +10,10 @@ package fr.inria.atlanmod.neoemf.io.writer;
 
 import org.atlanmod.commons.primitive.Strings;
 
+import javax.annotation.Nonnegative;
+import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
+import javax.xml.stream.XMLStreamException;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayDeque;
@@ -17,11 +21,6 @@ import java.util.Deque;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-
-import javax.annotation.Nonnegative;
-import javax.annotation.Nonnull;
-import javax.annotation.ParametersAreNonnullByDefault;
-import javax.xml.stream.XMLStreamException;
 
 /**
  * An indenting {@link XmiStreamWriter}.

@@ -12,18 +12,16 @@ import fr.inria.atlanmod.neoemf.bind.Bindings;
 import fr.inria.atlanmod.neoemf.data.store.Store;
 import fr.inria.atlanmod.neoemf.data.store.listener.StoreListener;
 import fr.inria.atlanmod.neoemf.data.store.listener.StoreStats;
-
 import org.atlanmod.commons.log.Level;
-
-import java.io.IOException;
-import java.nio.file.Path;
-import java.util.Map;
-import java.util.Optional;
 
 import javax.annotation.Nonnegative;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.util.Map;
+import java.util.Optional;
 
 /**
  * A configuration that builds the behavior of {@link fr.inria.atlanmod.neoemf.data.BackendFactory BackendFactories} and

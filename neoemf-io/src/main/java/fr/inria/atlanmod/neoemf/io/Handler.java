@@ -8,13 +8,12 @@
 
 package fr.inria.atlanmod.neoemf.io;
 
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyElement;
 import fr.inria.atlanmod.neoemf.io.proxy.ProxyAttribute;
+import fr.inria.atlanmod.neoemf.io.proxy.ProxyElement;
 import fr.inria.atlanmod.neoemf.io.proxy.ProxyReference;
 
-import java.io.IOException;
-
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.io.IOException;
 
 /**
  * A object that handles events received from a {@link Notifier}.

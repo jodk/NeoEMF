@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -10,7 +11,7 @@
 
     <artifactId>neoemf-core</artifactId>
 
-    <packaging>bundle</packaging>
+    <packaging>jar</packaging>
 
     <name>NeoEMF Core</name>
     <description>
@@ -19,6 +20,8 @@
     </description>
 
     <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <chronicle-map.version>3.17.1</chronicle-map.version>
         <chronicle-bytes.version>2.17.19</chronicle-bytes.version>
 
@@ -94,56 +97,6 @@
             <artifactId>org.eclipse.emf.ecore</artifactId>
         </dependency>
 
-        <!-- OSGi -->
-
-        <dependency>
-            <groupId>org.osgi</groupId>
-            <artifactId>org.osgi.service.component.annotations</artifactId>
-        </dependency>
-
-        <!-- Test -->
-
-        <dependency>
-            <groupId>org.atlanmod.commons</groupId>
-            <artifactId>commons-core</artifactId>
-            <type>test-jar</type>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-params</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-        </dependency>
-
-        <!-- Internal -->
-
-        <dependency>
-            <groupId>fr.inria.atlanmod.neoemf</groupId>
-            <artifactId>neoemf-utils</artifactId>
-            <version>${project.version}</version>
-            <optional>true</optional>
-            <type>pom</type>
-        </dependency>
 
     </dependencies>
 
@@ -237,38 +190,6 @@
     </dependencyManagement>
 
     <build>
-        <plugins>
-
-            <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <configuration>
-                    <instructions>
-                        <Bundle-SymbolicName>${project.groupId}.core</Bundle-SymbolicName>
-                        <Import-Package>
-                            org.eclipse.emf.compare;resolution:=optional,
-                            com.google.common.cache;resolution:=optional
-                        </Import-Package>
-                        <Export-Package>
-                            !fr.inria.atlanmod.neoemf.*.internal.*,
-                            !fr.inria.atlanmod.neoemf.data.im.*,
-                            fr.inria.atlanmod.neoemf.*
-                        </Export-Package>
-                        <Embed-Dependency><!-- Inherited -->
-                            *;
-                            scope=compile|runtime;
-                            type=!pom;
-                            groupId=!${project.groupId}|org.atlanmod.commons|org.eclipse.emf|org.apache.logging.log4j
-                        </Embed-Dependency>
-                        <Require-Bundle>
-                            org.atlanmod.commons;visibility:=reexport,
-                            org.eclipse.emf.ecore;visibility:=reexport
-                        </Require-Bundle>
-                    </instructions>
-                </configuration>
-            </plugin>
-
-        </plugins>
     </build>
 
 </project>

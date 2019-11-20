@@ -10,13 +10,12 @@ package fr.inria.atlanmod.neoemf.io.listener;
 
 import org.atlanmod.commons.log.Log;
 
+import javax.annotation.Nonnegative;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Timer;
 import java.util.TimerTask;
-
-import javax.annotation.Nonnegative;
-import javax.annotation.ParametersAreNonnullByDefault;
 
 /**
  * A {@link EventListener} that logs the progress of a migration.

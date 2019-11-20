@@ -8,9 +8,8 @@
 
 package fr.inria.atlanmod.neoemf.data;
 
-import java.io.Closeable;
-
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.io.Closeable;
 
 /**
  * An object that can save its current state.

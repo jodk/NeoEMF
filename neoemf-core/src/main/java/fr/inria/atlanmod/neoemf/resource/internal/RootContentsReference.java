@@ -9,7 +9,6 @@
 package fr.inria.atlanmod.neoemf.resource.internal;
 
 import fr.inria.atlanmod.neoemf.resource.PersistentResource;
-
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.ETypedElement;
 import org.eclipse.emf.ecore.impl.EClassifierImpl;

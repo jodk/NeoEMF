@@ -10,16 +10,14 @@ package fr.inria.atlanmod.neoemf.core;
 
 import fr.inria.atlanmod.neoemf.core.internal.PersistenceAdapter;
 import fr.inria.atlanmod.neoemf.data.store.Storable;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.resource.Resource;
 
-import java.util.Iterator;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Iterator;
 
 /**
  * An {@link EObject} identified by a unique {@link Id}, able to persist in {@link

@@ -14,18 +14,16 @@ import fr.inria.atlanmod.neoemf.io.processor.XPathResolver;
 import fr.inria.atlanmod.neoemf.io.proxy.ProxyReference;
 import fr.inria.atlanmod.neoemf.io.proxy.ProxyValue;
 import fr.inria.atlanmod.neoemf.io.util.XmiConstants;
-
 import org.atlanmod.commons.log.Log;
 import org.atlanmod.commons.primitive.Strings;
-
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
 
 import static java.util.Objects.nonNull;
 

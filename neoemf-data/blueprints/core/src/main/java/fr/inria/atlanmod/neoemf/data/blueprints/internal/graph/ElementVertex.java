@@ -11,22 +11,19 @@ package fr.inria.atlanmod.neoemf.data.blueprints.internal.graph;
 import com.tinkerpop.blueprints.Direction;
 import com.tinkerpop.blueprints.Edge;
 import com.tinkerpop.blueprints.Vertex;
-
 import fr.inria.atlanmod.neoemf.core.Id;
 import fr.inria.atlanmod.neoemf.data.bean.ClassBean;
 import fr.inria.atlanmod.neoemf.data.bean.FeatureBean;
 import fr.inria.atlanmod.neoemf.data.bean.SingleFeatureBean;
 import fr.inria.atlanmod.neoemf.data.blueprints.internal.graph.wrapper.IdVertex;
-
 import org.atlanmod.commons.Lazy;
 import org.atlanmod.commons.LazyReference;
 import org.atlanmod.commons.collect.SizedIterator;
 
-import java.util.Optional;
-
 import javax.annotation.Nonnegative;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Optional;
 
 /**
  * A {@link com.tinkerpop.blueprints.Vertex} representing an element that can have a meta-class and a container.

@@ -10,11 +10,7 @@ package fr.inria.atlanmod.neoemf.data.mapdb.config;
 
 import fr.inria.atlanmod.neoemf.bind.FactoryBinding;
 import fr.inria.atlanmod.neoemf.config.BaseConfig;
-import fr.inria.atlanmod.neoemf.config.Config;
 import fr.inria.atlanmod.neoemf.data.mapdb.MapDbBackendFactory;
-
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.ServiceScope;
 
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -25,7 +21,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
  * The mapping is the only required option. All the others are optional: configuration can be created using all or none
  * of them.
  */
-@Component(service = Config.class, scope = ServiceScope.PROTOTYPE)
+
 @FactoryBinding(factory = MapDbBackendFactory.class)
 @ParametersAreNonnullByDefault
 public class MapDbConfig extends BaseConfig<MapDbConfig> {

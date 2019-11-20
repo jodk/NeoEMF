@@ -9,26 +9,20 @@
 package fr.inria.atlanmod.neoemf.data.blueprints.config;
 
 import com.tinkerpop.blueprints.impls.tg.TinkerGraph;
-
 import fr.inria.atlanmod.neoemf.bind.FactoryBinding;
-import fr.inria.atlanmod.neoemf.config.Config;
 import fr.inria.atlanmod.neoemf.data.blueprints.BlueprintsBackendFactory;
-
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.ServiceScope;
-
-import java.nio.file.Path;
-import java.util.function.Predicate;
 
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.nio.file.Path;
+import java.util.function.Predicate;
 
 /**
  * A {@link fr.inria.atlanmod.neoemf.config.Config} that creates Blueprints TinkerGraph specific configuration.
  * <p>
  * All features are all optional: configuration can be created using all or none of them.
  */
-@Component(service = Config.class, scope = ServiceScope.PROTOTYPE)
+
 @FactoryBinding(factory = BlueprintsBackendFactory.class, variant = "tinkergraph")
 @ParametersAreNonnullByDefault
 public class BlueprintsTinkerConfig extends BaseBlueprintsConfig<BlueprintsTinkerConfig> {

@@ -10,10 +10,9 @@ package fr.inria.atlanmod.neoemf.core.internal.collect;
 
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import java.util.function.IntSupplier;
-
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.function.IntSupplier;
 
 /**
  * A read-only {@link LazyListIterator} that does not resolve objects.

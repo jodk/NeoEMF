@@ -10,7 +10,6 @@ package fr.inria.atlanmod.neoemf.core.internal.collect;
 
 import fr.inria.atlanmod.neoemf.core.PersistentEObject;
 import fr.inria.atlanmod.neoemf.util.EFeatures;
-
 import org.atlanmod.commons.LazyReference;
 import org.atlanmod.commons.primitive.Booleans;
 import org.eclipse.emf.ecore.EObject;
@@ -20,18 +19,8 @@ import org.eclipse.emf.ecore.util.AbstractSequentialInternalEList;
 import org.eclipse.emf.ecore.util.FeatureMap;
 import org.eclipse.emf.ecore.util.FeatureMapUtil;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.ListIterator;
-import java.util.Objects;
-
-import javax.annotation.Nonnegative;
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
-import javax.annotation.ParametersAreNullableByDefault;
+import javax.annotation.*;
+import java.util.*;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;

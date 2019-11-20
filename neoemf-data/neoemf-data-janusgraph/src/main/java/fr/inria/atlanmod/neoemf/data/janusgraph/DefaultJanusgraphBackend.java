@@ -3,16 +3,14 @@ package fr.inria.atlanmod.neoemf.data.janusgraph;
 import fr.inria.atlanmod.neoemf.core.Id;
 import fr.inria.atlanmod.neoemf.data.bean.ManyFeatureBean;
 import fr.inria.atlanmod.neoemf.data.bean.SingleFeatureBean;
-
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Stream;
+import org.atlanmod.commons.Throwables;
 
 import javax.annotation.Nonnegative;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
-
-import org.atlanmod.commons.Throwables;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Stream;
 
 import static org.atlanmod.commons.Preconditions.checkNotContainsNull;
 import static org.atlanmod.commons.Preconditions.checkNotNull;

@@ -13,18 +13,16 @@ import fr.inria.atlanmod.neoemf.core.IdConverters;
 import fr.inria.atlanmod.neoemf.data.mapping.ManyReferenceMergedAs;
 import fr.inria.atlanmod.neoemf.data.mapping.ManyValueWithArrays;
 import fr.inria.atlanmod.neoemf.data.mapping.ReferenceAs;
-
 import org.apache.hadoop.hbase.client.Table;
 import org.atlanmod.commons.function.Converter;
 import org.atlanmod.commons.primitive.Strings;
 
+import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
-import javax.annotation.Nonnull;
-import javax.annotation.ParametersAreNonnullByDefault;
 
 /**
  * A {@link HBaseBackend} that use a {@link ManyValueWithArrays} mapping for storing attributes and {@link

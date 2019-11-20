@@ -13,11 +13,10 @@ import com.tinkerpop.blueprints.Predicate;
 import com.tinkerpop.blueprints.Query;
 import com.tinkerpop.blueprints.Vertex;
 
-import java.util.Optional;
-import java.util.function.BiFunction;
-
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Optional;
+import java.util.function.BiFunction;
 
 import static org.atlanmod.commons.collect.MoreIterables.firstElement;
 

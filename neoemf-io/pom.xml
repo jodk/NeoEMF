@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -10,15 +11,12 @@
 
     <artifactId>neoemf-io</artifactId>
 
-    <packaging>bundle</packaging>
+    <packaging>jar</packaging>
 
     <name>NeoEMF I/O</name>
-    <description />
+    <description/>
 
     <properties>
-        <generated-sources.location>${project.basedir}/src/test/java-gen/</generated-sources.location>
-        <models.location>${project.basedir}/src/test/resources/model/</models.location>
-
         <stax.verions>1.0-2</stax.verions>
         <stax2.version>4.1</stax2.version>
         <woodstox.version>4.4.1</woodstox.version>
@@ -64,61 +62,6 @@
             <artifactId>org.eclipse.emf.common</artifactId>
         </dependency>
 
-        <!-- OSGi -->
-
-        <dependency>
-            <groupId>org.osgi</groupId>
-            <artifactId>org.osgi.core</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.osgi</groupId>
-            <artifactId>org.osgi.service.component.annotations</artifactId>
-        </dependency>
-
-        <!-- EMF: Code generation -->
-
-        <dependency>
-            <groupId>org.eclipse.emf</groupId>
-            <artifactId>org.eclipse.emf.ecore.xcore.lib</artifactId>
-        </dependency>
-
-        <!-- Test -->
-
-        <dependency>
-            <groupId>org.atlanmod.commons</groupId>
-            <artifactId>commons-core</artifactId>
-            <type>test-jar</type>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-params</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-        </dependency>
-
-        <!-- Test: EMF -->
-
-        <dependency>
-            <groupId>org.eclipse.emf</groupId>
-            <artifactId>org.eclipse.emf.ecore.xmi</artifactId>
-            <scope>test</scope>
-        </dependency>
 
         <!-- Internal -->
 
@@ -126,22 +69,6 @@
             <groupId>fr.inria.atlanmod.neoemf</groupId>
             <artifactId>neoemf-core</artifactId>
             <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>fr.inria.atlanmod.neoemf</groupId>
-            <artifactId>neoemf-core</artifactId>
-            <version>${project.version}</version>
-            <type>test-jar</type>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency> <!-- Used by `neoemf-core` : Required for `Resource` comparison -->
-            <groupId>fr.inria.atlanmod.neoemf</groupId>
-            <artifactId>neoemf-utils</artifactId>
-            <version>${project.version}</version>
-            <type>pom</type>
-            <scope>test</scope>
         </dependency>
 
     </dependencies>
@@ -170,203 +97,11 @@
                 <version>${woodstox.version}</version>
             </dependency>
 
-            <!-- EMF: Code generation -->
-
-            <dependency>
-                <groupId>org.eclipse.emf</groupId>
-                <artifactId>org.eclipse.emf.ecore.xcore.lib</artifactId>
-                <version>1.3.0</version>
-            </dependency>
-
         </dependencies>
     </dependencyManagement>
 
     <build>
-        <plugins>
 
-            <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <configuration>
-                    <instructions>
-                        <Bundle-SymbolicName>${project.groupId}.io</Bundle-SymbolicName>
-                        <Export-Package>
-                            !fr.inria.atlanmod.neoemf.io.*.internal.*,
-                            fr.inria.atlanmod.neoemf.io.*
-                        </Export-Package>
-                        <_exportcontents>
-                            org.codehaus.stax2.*;version="${stax2.version}",
-                            com.ctc.wstx.*;version="${woodstox.version}"
-                        </_exportcontents>
-                        <Require-Bundle>
-                            ${project.groupId}.core
-                        </Require-Bundle>
-                    </instructions>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-clean-plugin</artifactId>
-                <configuration>
-                    <filesets>
-                        <fileset>
-                            <directory>${generated-sources.location}</directory>
-                        </fileset>
-                    </filesets>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
-                <version>3.0.0</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>add-test-source</goal>
-                        </goals>
-                        <configuration>
-                            <sources>
-                                <source>${generated-sources.location}</source>
-                            </sources>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
-                <groupId>org.eclipse.xtext</groupId>
-                <artifactId>xtext-maven-plugin</artifactId>
-                <version>${xtext.version}</version>
-                <executions>
-                    <execution>
-                        <phase>generate-test-sources</phase>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <languages>
-                        <language>
-                            <setup>org.eclipse.xtext.ecore.EcoreSupport</setup>
-                        </language>
-                        <language>
-                            <setup>org.eclipse.emf.codegen.ecore.xtext.GenModelSupport</setup>
-                        </language>
-                        <language>
-                            <setup>org.eclipse.emf.ecore.xcore.XcoreStandaloneSetup</setup>
-                            <outputConfigurations>
-                                <outputConfiguration>
-                                    <outputDirectory>${generated-sources.location}</outputDirectory>
-                                </outputConfiguration>
-                            </outputConfigurations>
-                        </language>
-                    </languages>
-                    <sourceRoots>
-                        <root>${models.location}</root>
-                    </sourceRoots>
-                </configuration>
-                <dependencies>
-
-                    <!-- Eclipse -->
-
-                    <dependency>
-                        <groupId>org.eclipse.core</groupId>
-                        <artifactId>org.eclipse.core.resources</artifactId>
-                        <version>3.7.100</version>
-                    </dependency>
-
-                    <!-- Xtext -->
-
-                    <dependency>
-                        <groupId>org.eclipse.text</groupId>
-                        <artifactId>org.eclipse.text</artifactId>
-                        <version>3.5.101</version>
-                    </dependency>
-
-                    <dependency>
-                        <groupId>org.eclipse.xtext</groupId>
-                        <artifactId>org.eclipse.xtext.ecore</artifactId>
-                        <version>${xtext.version}</version>
-                    </dependency>
-
-                    <dependency>
-                        <groupId>org.eclipse.xtext</groupId>
-                        <artifactId>org.eclipse.xtext.builder.standalone</artifactId>
-                        <version>${xtext.version}</version>
-                    </dependency>
-
-                    <dependency>
-                        <groupId>org.eclipse.xtext</groupId>
-                        <artifactId>org.eclipse.xtext.generator</artifactId>
-                        <version>${xtext.version}</version>
-                    </dependency>
-
-                    <dependency>
-                        <groupId>org.eclipse.xtext</groupId>
-                        <artifactId>org.eclipse.xtext.xtext.generator</artifactId>
-                        <version>${xtext.version}</version>
-                    </dependency>
-
-                    <!-- EMF: Ecore -->
-
-                    <dependency>
-                        <groupId>org.eclipse.emf</groupId>
-                        <artifactId>org.eclipse.emf.common</artifactId>
-                        <version>${emf.version}</version>
-                    </dependency>
-
-                    <dependency>
-                        <groupId>org.eclipse.emf</groupId>
-                        <artifactId>org.eclipse.emf.ecore</artifactId>
-                        <version>${emf.version}</version>
-                    </dependency>
-
-                    <dependency>
-                        <groupId>org.eclipse.emf</groupId>
-                        <artifactId>org.eclipse.emf.ecore.xmi</artifactId>
-                        <version>${emf.version}</version>
-                    </dependency>
-
-                    <!-- EMF: Xcore -->
-
-                    <dependency>
-                        <groupId>org.eclipse.emf</groupId>
-                        <artifactId>org.eclipse.emf.ecore.xcore</artifactId>
-                        <version>1.7.0</version>
-                    </dependency>
-
-                    <dependency>
-                        <groupId>org.eclipse.emf</groupId>
-                        <artifactId>org.eclipse.emf.ecore.xcore.lib</artifactId>
-                        <version>1.3.0</version>
-                    </dependency>
-
-                    <!-- EMF: CodeGen -->
-
-                    <dependency>
-                        <groupId>org.eclipse.emf</groupId>
-                        <artifactId>org.eclipse.emf.codegen</artifactId>
-                        <version>2.14.0</version>
-                    </dependency>
-
-                    <dependency>
-                        <groupId>org.eclipse.emf</groupId>
-                        <artifactId>org.eclipse.emf.codegen.ecore</artifactId>
-                        <version>${emf.version}</version>
-                    </dependency>
-
-                    <dependency>
-                        <groupId>org.eclipse.emf</groupId>
-                        <artifactId>org.eclipse.emf.codegen.ecore.xtext</artifactId>
-                        <version>1.4.0</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-
-        </plugins>
     </build>
 
 </project>

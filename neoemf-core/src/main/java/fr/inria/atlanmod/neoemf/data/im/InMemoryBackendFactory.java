@@ -11,11 +11,8 @@ package fr.inria.atlanmod.neoemf.data.im;
 import fr.inria.atlanmod.neoemf.config.ImmutableConfig;
 import fr.inria.atlanmod.neoemf.data.AbstractBackendFactory;
 import fr.inria.atlanmod.neoemf.data.Backend;
-import fr.inria.atlanmod.neoemf.data.BackendFactory;
 import fr.inria.atlanmod.neoemf.data.im.config.InMemoryConfig;
-
 import org.eclipse.emf.common.util.URI;
-import org.osgi.service.component.annotations.Component;
 
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -24,7 +21,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
  * A {@link fr.inria.atlanmod.neoemf.data.BackendFactory} that create {@link fr.inria.atlanmod.neoemf.data.im.InMemoryBackend}
  * instances.
  */
-@Component(service = BackendFactory.class)
+
 @ParametersAreNonnullByDefault
 public class InMemoryBackendFactory extends AbstractBackendFactory<InMemoryConfig> {
 

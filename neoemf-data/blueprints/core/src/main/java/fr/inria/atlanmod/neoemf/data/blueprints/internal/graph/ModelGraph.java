@@ -8,29 +8,23 @@
 
 package fr.inria.atlanmod.neoemf.data.blueprints.internal.graph;
 
-import com.tinkerpop.blueprints.CloseableIterable;
-import com.tinkerpop.blueprints.Direction;
-import com.tinkerpop.blueprints.Edge;
-import com.tinkerpop.blueprints.Element;
-import com.tinkerpop.blueprints.Graph;
-import com.tinkerpop.blueprints.Index;
-import com.tinkerpop.blueprints.KeyIndexableGraph;
-import com.tinkerpop.blueprints.Vertex;
+import com.tinkerpop.blueprints.*;
 import com.tinkerpop.blueprints.impls.tg.TinkerGraph;
 import com.tinkerpop.blueprints.util.wrappers.WrapperGraph;
-
 import fr.inria.atlanmod.neoemf.core.Id;
 import fr.inria.atlanmod.neoemf.core.IdConverters;
 import fr.inria.atlanmod.neoemf.data.bean.ClassBean;
 import fr.inria.atlanmod.neoemf.data.blueprints.internal.graph.wrapper.IdGraph;
 import fr.inria.atlanmod.neoemf.data.blueprints.internal.graph.wrapper.IdVertex;
-
 import org.atlanmod.commons.Copiable;
 import org.atlanmod.commons.cache.Cache;
 import org.atlanmod.commons.cache.CacheBuilder;
 import org.atlanmod.commons.collect.MoreIterables;
 import org.atlanmod.commons.function.Converter;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -38,10 +32,6 @@ import java.util.Set;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
 
 /**
  * An {@link com.tinkerpop.blueprints.Graph} representing a meta-model.

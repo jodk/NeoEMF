@@ -9,14 +9,12 @@
 package fr.inria.atlanmod.neoemf.core.internal.collect;
 
 import fr.inria.atlanmod.neoemf.core.PersistentEObject;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 
-import java.util.List;
-
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.List;
 
 /**
  * A {@link java.util.Map} representing a multi-valued feature which behaves as a proxy and that delegates its

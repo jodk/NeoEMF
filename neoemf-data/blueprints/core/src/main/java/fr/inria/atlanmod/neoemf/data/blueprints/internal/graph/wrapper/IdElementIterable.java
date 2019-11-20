@@ -10,14 +10,12 @@ package fr.inria.atlanmod.neoemf.data.blueprints.internal.graph.wrapper;
 
 import com.tinkerpop.blueprints.CloseableIterable;
 import com.tinkerpop.blueprints.Element;
-
 import org.atlanmod.commons.collect.DelegatedIterator;
-
-import java.util.Iterator;
-import java.util.function.Function;
 
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Iterator;
+import java.util.function.Function;
 
 /**
  * An {@link Iterable} able to map the result of each method call to a dedicated implementation.

@@ -11,11 +11,10 @@ package fr.inria.atlanmod.neoemf.core.internal.collect;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.FeatureMap;
 
-import java.util.ListIterator;
-import java.util.NoSuchElementException;
-
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.ListIterator;
+import java.util.NoSuchElementException;
 
 import static org.atlanmod.commons.Preconditions.checkNotNull;
 

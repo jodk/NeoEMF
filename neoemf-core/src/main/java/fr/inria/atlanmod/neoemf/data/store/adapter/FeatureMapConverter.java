@@ -11,7 +11,6 @@ package fr.inria.atlanmod.neoemf.data.store.adapter;
 import fr.inria.atlanmod.neoemf.core.Id;
 import fr.inria.atlanmod.neoemf.core.PersistentEObject;
 import fr.inria.atlanmod.neoemf.util.EFeatures;
-
 import org.atlanmod.commons.function.BiConverter;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;

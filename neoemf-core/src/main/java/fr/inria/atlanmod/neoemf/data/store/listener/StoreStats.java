@@ -9,18 +9,16 @@
 package fr.inria.atlanmod.neoemf.data.store.listener;
 
 import fr.inria.atlanmod.neoemf.data.store.Store;
-
 import org.atlanmod.commons.primitive.Strings;
 
+import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Collectors;
-
-import javax.annotation.Nonnull;
-import javax.annotation.ParametersAreNonnullByDefault;
 
 /**
  * Statistics about the usage of a {@link Store} chain.

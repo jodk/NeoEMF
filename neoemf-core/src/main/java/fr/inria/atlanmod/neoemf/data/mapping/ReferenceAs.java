@@ -10,13 +10,11 @@ package fr.inria.atlanmod.neoemf.data.mapping;
 
 import fr.inria.atlanmod.neoemf.core.Id;
 import fr.inria.atlanmod.neoemf.data.bean.SingleFeatureBean;
-
 import org.atlanmod.commons.function.Converter;
-
-import java.util.Optional;
 
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Optional;
 
 /**
  * A {@link ReferenceMapper} that provides a default behavior to use {@code M} instead of {@link Id} for references.

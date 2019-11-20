@@ -12,11 +12,10 @@ import fr.inria.atlanmod.neoemf.io.AbstractNotifier;
 import fr.inria.atlanmod.neoemf.io.processor.AbstractProcessor;
 import fr.inria.atlanmod.neoemf.io.processor.Processor;
 
-import java.util.Collections;
-import java.util.List;
-
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * An abstract {@link Reader}.

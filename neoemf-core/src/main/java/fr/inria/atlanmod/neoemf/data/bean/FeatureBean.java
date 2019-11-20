@@ -10,10 +10,9 @@ package fr.inria.atlanmod.neoemf.data.bean;
 
 import fr.inria.atlanmod.neoemf.core.Id;
 
-import java.io.Serializable;
-
 import javax.annotation.Nonnegative;
 import javax.annotation.Nonnull;
+import java.io.Serializable;
 
 /**
  * The simple representation of a {@link org.eclipse.emf.ecore.EStructuralFeature} of a {@link

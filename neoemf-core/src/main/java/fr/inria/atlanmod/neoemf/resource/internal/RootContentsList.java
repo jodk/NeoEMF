@@ -12,15 +12,13 @@ import fr.inria.atlanmod.neoemf.core.PersistentEObject;
 import fr.inria.atlanmod.neoemf.data.store.adapter.StoreAdapter;
 import fr.inria.atlanmod.neoemf.resource.DefaultPersistentResource;
 import fr.inria.atlanmod.neoemf.resource.PersistentResource;
-
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.EStoreEObjectImpl;
 
-import java.util.Optional;
-
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Optional;
 
 import static java.util.Objects.nonNull;
 import static org.atlanmod.commons.Preconditions.checkArgument;

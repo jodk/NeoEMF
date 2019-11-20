@@ -10,12 +10,11 @@ package fr.inria.atlanmod.neoemf.data.bean;
 
 import fr.inria.atlanmod.neoemf.core.Id;
 
-import java.util.Objects;
-
 import javax.annotation.Nonnegative;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Objects;
 
 import static org.atlanmod.commons.Preconditions.checkGreaterThanOrEqualTo;
 import static org.atlanmod.commons.Preconditions.checkNotNull;

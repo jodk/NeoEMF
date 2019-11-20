@@ -11,11 +11,10 @@ package fr.inria.atlanmod.neoemf.data.blueprints.internal.graph.wrapper;
 import com.tinkerpop.blueprints.Element;
 import com.tinkerpop.blueprints.util.ElementHelper;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.HashSet;
+import java.util.Set;
 
 import static org.atlanmod.commons.Preconditions.checkArgument;
 

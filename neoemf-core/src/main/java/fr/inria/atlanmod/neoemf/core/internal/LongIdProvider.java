@@ -11,14 +11,12 @@ package fr.inria.atlanmod.neoemf.core.internal;
 import fr.inria.atlanmod.neoemf.core.AbstractIdProvider;
 import fr.inria.atlanmod.neoemf.core.Id;
 import fr.inria.atlanmod.neoemf.core.IdProvider;
-
 import org.atlanmod.commons.annotation.Singleton;
 import org.atlanmod.commons.annotation.Static;
 
-import java.util.UUID;
-
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.UUID;
 
 import static org.atlanmod.commons.Preconditions.checkNotNull;
 

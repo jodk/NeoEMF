@@ -10,36 +10,21 @@ package fr.inria.atlanmod.neoemf.config;
 
 import fr.inria.atlanmod.neoemf.bind.Bindings;
 import fr.inria.atlanmod.neoemf.data.mapping.DataMapper;
-import fr.inria.atlanmod.neoemf.data.store.AutoSavingStore;
-import fr.inria.atlanmod.neoemf.data.store.ClassCachingStore;
-import fr.inria.atlanmod.neoemf.data.store.ContainerCachingStore;
-import fr.inria.atlanmod.neoemf.data.store.FeatureCachingStore;
-import fr.inria.atlanmod.neoemf.data.store.ListeningStore;
-import fr.inria.atlanmod.neoemf.data.store.ReadOnlyStore;
-import fr.inria.atlanmod.neoemf.data.store.SizeCachingStore;
-import fr.inria.atlanmod.neoemf.data.store.Store;
+import fr.inria.atlanmod.neoemf.data.store.*;
 import fr.inria.atlanmod.neoemf.data.store.listener.LoggingStoreListener;
 import fr.inria.atlanmod.neoemf.data.store.listener.RecordingStoreListener;
 import fr.inria.atlanmod.neoemf.data.store.listener.StoreListener;
 import fr.inria.atlanmod.neoemf.data.store.listener.StoreStats;
-
 import org.atlanmod.commons.log.Level;
 import org.atlanmod.commons.log.Log;
-
-import java.io.IOException;
-import java.nio.file.Path;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Set;
-import java.util.TreeMap;
-import java.util.function.Predicate;
 
 import javax.annotation.Nonnull;
 import javax.annotation.OverridingMethodsMustInvokeSuper;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.util.*;
+import java.util.function.Predicate;
 
 import static org.atlanmod.commons.Preconditions.checkNotNull;
 

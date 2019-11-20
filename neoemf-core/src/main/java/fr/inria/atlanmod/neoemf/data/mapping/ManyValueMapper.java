@@ -11,13 +11,12 @@ package fr.inria.atlanmod.neoemf.data.mapping;
 import fr.inria.atlanmod.neoemf.data.bean.ManyFeatureBean;
 import fr.inria.atlanmod.neoemf.data.bean.SingleFeatureBean;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Stream;
-
 import javax.annotation.Nonnegative;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Stream;
 
 import static org.atlanmod.commons.Preconditions.checkNotNull;
 

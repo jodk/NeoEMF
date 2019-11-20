@@ -10,7 +10,6 @@ package fr.inria.atlanmod.neoemf.data.blueprints.internal.graph;
 
 import com.tinkerpop.blueprints.Direction;
 import com.tinkerpop.blueprints.Edge;
-
 import fr.inria.atlanmod.neoemf.data.bean.SingleFeatureBean;
 import fr.inria.atlanmod.neoemf.data.blueprints.internal.graph.wrapper.IdEdge;
 

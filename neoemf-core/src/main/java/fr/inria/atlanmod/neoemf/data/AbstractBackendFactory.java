@@ -11,18 +11,16 @@ package fr.inria.atlanmod.neoemf.data;
 import fr.inria.atlanmod.neoemf.config.Config;
 import fr.inria.atlanmod.neoemf.config.ImmutableConfig;
 import fr.inria.atlanmod.neoemf.data.mapping.AbstractMapperFactory;
-
 import org.atlanmod.commons.primitive.Strings;
 import org.eclipse.emf.common.util.URI;
 
+import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.stream.Collectors;
-
-import javax.annotation.Nonnull;
-import javax.annotation.ParametersAreNonnullByDefault;
 
 import static java.util.Objects.isNull;
 import static org.atlanmod.commons.Preconditions.checkArgument;

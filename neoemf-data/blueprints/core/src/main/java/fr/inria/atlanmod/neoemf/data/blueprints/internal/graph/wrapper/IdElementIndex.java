@@ -12,10 +12,9 @@ import com.tinkerpop.blueprints.CloseableIterable;
 import com.tinkerpop.blueprints.Element;
 import com.tinkerpop.blueprints.Index;
 
-import java.util.function.Function;
-
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.function.Function;
 
 /**
  * An {@link Index} able to map the result of each method call to a dedicated implementation.

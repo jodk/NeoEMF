@@ -10,7 +10,6 @@ package fr.inria.atlanmod.neoemf.data.berkeleydb;
 
 import com.sleepycat.je.DatabaseConfig;
 import com.sleepycat.je.Environment;
-
 import fr.inria.atlanmod.neoemf.data.mapping.ManyValueWithLists;
 
 import javax.annotation.ParametersAreNonnullByDefault;

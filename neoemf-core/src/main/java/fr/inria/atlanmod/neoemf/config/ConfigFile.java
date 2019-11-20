@@ -8,6 +8,8 @@
 
 package fr.inria.atlanmod.neoemf.config;
 
+import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
@@ -16,9 +18,6 @@ import java.nio.file.Path;
 import java.util.Map;
 import java.util.Properties;
 import java.util.stream.Collectors;
-
-import javax.annotation.Nonnull;
-import javax.annotation.ParametersAreNonnullByDefault;
 
 import static org.atlanmod.commons.Preconditions.checkNotNull;
 

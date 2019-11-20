@@ -10,11 +10,10 @@ package fr.inria.atlanmod.neoemf.core.internal;
 
 import fr.inria.atlanmod.neoemf.core.Id;
 
-import java.util.Objects;
-
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 import javax.annotation.concurrent.Immutable;
+import java.util.Objects;
 
 /**
  * An {@link Id} with a long representation.

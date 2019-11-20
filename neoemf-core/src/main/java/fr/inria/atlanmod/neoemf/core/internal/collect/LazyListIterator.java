@@ -8,13 +8,12 @@
 
 package fr.inria.atlanmod.neoemf.core.internal.collect;
 
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.ConcurrentModificationException;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.NoSuchElementException;
 import java.util.function.IntSupplier;
-
-import javax.annotation.ParametersAreNonnullByDefault;
 
 import static org.atlanmod.commons.Preconditions.checkPositionIndex;
 import static org.atlanmod.commons.Preconditions.checkState;

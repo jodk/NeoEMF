@@ -8,12 +8,11 @@
 
 package fr.inria.atlanmod.neoemf.core.internal.collect;
 
-import java.util.List;
-import java.util.ListIterator;
-
 import javax.annotation.Nonnegative;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.List;
+import java.util.ListIterator;
 
 /**
  * A stateless helper to iterate on a {@link ListIterator}.

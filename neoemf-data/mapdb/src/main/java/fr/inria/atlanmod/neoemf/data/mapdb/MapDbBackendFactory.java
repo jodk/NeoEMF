@@ -10,23 +10,19 @@ package fr.inria.atlanmod.neoemf.data.mapdb;
 
 import fr.inria.atlanmod.neoemf.data.AbstractBackendFactory;
 import fr.inria.atlanmod.neoemf.data.Backend;
-import fr.inria.atlanmod.neoemf.data.BackendFactory;
 import fr.inria.atlanmod.neoemf.data.mapdb.config.MapDbConfig;
-
 import org.mapdb.DB;
 import org.mapdb.DBMaker;
-import org.osgi.service.component.annotations.Component;
-
-import java.nio.file.Files;
-import java.nio.file.Path;
 
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 /**
  * A {@link fr.inria.atlanmod.neoemf.data.BackendFactory} that creates {@link MapDbBackend} instances.
  */
-@Component(service = BackendFactory.class)
+
 @ParametersAreNonnullByDefault
 public class MapDbBackendFactory extends AbstractBackendFactory<MapDbConfig> {
 

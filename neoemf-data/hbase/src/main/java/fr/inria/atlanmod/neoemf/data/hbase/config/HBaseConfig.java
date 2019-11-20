@@ -10,11 +10,7 @@ package fr.inria.atlanmod.neoemf.data.hbase.config;
 
 import fr.inria.atlanmod.neoemf.bind.FactoryBinding;
 import fr.inria.atlanmod.neoemf.config.BaseConfig;
-import fr.inria.atlanmod.neoemf.config.Config;
 import fr.inria.atlanmod.neoemf.data.hbase.HBaseBackendFactory;
-
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.ServiceScope;
 
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
@@ -24,7 +20,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
  * <p>
  * All features are all optional: configuration can be created using all or none of them.
  */
-@Component(service = Config.class, scope = ServiceScope.PROTOTYPE)
+
 @FactoryBinding(factory = HBaseBackendFactory.class)
 @ParametersAreNonnullByDefault
 public class HBaseConfig extends BaseConfig<HBaseConfig> {

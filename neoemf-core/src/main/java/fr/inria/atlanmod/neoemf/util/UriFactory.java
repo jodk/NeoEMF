@@ -9,14 +9,12 @@
 package fr.inria.atlanmod.neoemf.util;
 
 import fr.inria.atlanmod.neoemf.bind.Bindings;
-
 import org.eclipse.emf.common.util.URI;
-
-import java.io.File;
-import java.net.InetAddress;
 
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.io.File;
+import java.net.InetAddress;
 
 /**
  * A factory that creates {@link org.eclipse.emf.common.util.URI} instances.

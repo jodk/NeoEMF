@@ -13,7 +13,6 @@ import com.tinkerpop.blueprints.Graph;
 import com.tinkerpop.blueprints.KeyIndexableGraph;
 import com.tinkerpop.blueprints.util.ElementHelper;
 import com.tinkerpop.blueprints.util.GraphHelper;
-
 import fr.inria.atlanmod.neoemf.core.Id;
 import fr.inria.atlanmod.neoemf.data.AbstractBackend;
 import fr.inria.atlanmod.neoemf.data.bean.ClassBean;
@@ -23,15 +22,13 @@ import fr.inria.atlanmod.neoemf.data.blueprints.internal.graph.ContainingEdge;
 import fr.inria.atlanmod.neoemf.data.blueprints.internal.graph.ElementVertex;
 import fr.inria.atlanmod.neoemf.data.blueprints.internal.graph.ModelGraph;
 import fr.inria.atlanmod.neoemf.data.mapping.DataMapper;
-
 import org.atlanmod.commons.collect.MoreIterables;
-
-import java.util.Optional;
-import java.util.Set;
-import java.util.stream.Stream;
 
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Stream;
 
 import static org.atlanmod.commons.Preconditions.checkNotNull;
 

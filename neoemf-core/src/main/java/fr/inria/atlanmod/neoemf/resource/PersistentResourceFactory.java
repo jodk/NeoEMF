@@ -9,7 +9,6 @@
 package fr.inria.atlanmod.neoemf.resource;
 
 import fr.inria.atlanmod.neoemf.data.BackendFactoryRegistry;
-
 import org.atlanmod.commons.annotation.Singleton;
 import org.atlanmod.commons.annotation.Static;
 import org.eclipse.emf.common.util.URI;

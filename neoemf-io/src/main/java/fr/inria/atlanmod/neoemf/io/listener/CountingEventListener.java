@@ -8,16 +8,14 @@
 
 package fr.inria.atlanmod.neoemf.io.listener;
 
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyElement;
 import fr.inria.atlanmod.neoemf.io.proxy.ProxyAttribute;
+import fr.inria.atlanmod.neoemf.io.proxy.ProxyElement;
 import fr.inria.atlanmod.neoemf.io.proxy.ProxyReference;
-
 import org.atlanmod.commons.log.Log;
-
-import java.util.concurrent.atomic.AtomicLong;
 
 import javax.annotation.Nonnegative;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * A {@link EventListener} that counts the number of different element.

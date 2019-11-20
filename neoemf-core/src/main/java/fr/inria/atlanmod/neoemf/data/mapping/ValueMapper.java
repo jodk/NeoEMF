@@ -10,10 +10,9 @@ package fr.inria.atlanmod.neoemf.data.mapping;
 
 import fr.inria.atlanmod.neoemf.data.bean.SingleFeatureBean;
 
-import java.util.Optional;
-
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Optional;
 
 /**
  * An object capable of mapping single-valued attributes represented as a set of key/value pair.

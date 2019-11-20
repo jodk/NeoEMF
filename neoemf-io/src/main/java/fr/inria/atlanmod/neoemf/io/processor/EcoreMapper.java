@@ -9,28 +9,18 @@
 package fr.inria.atlanmod.neoemf.io.processor;
 
 import fr.inria.atlanmod.neoemf.core.Id;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyElement;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyAttribute;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyClass;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyReference;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyValue;
+import fr.inria.atlanmod.neoemf.io.proxy.*;
 import fr.inria.atlanmod.neoemf.util.EFeatures;
-
 import org.atlanmod.commons.primitive.Strings;
-import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.*;
 import org.eclipse.emf.ecore.util.ExtendedMetaData;
 import org.eclipse.emf.ecore.util.FeatureMapUtil;
 
+import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.io.IOException;
 import java.util.ArrayDeque;
 import java.util.Deque;
-
-import javax.annotation.Nonnull;
-import javax.annotation.ParametersAreNonnullByDefault;
 
 import static java.util.Objects.nonNull;
 import static org.atlanmod.commons.Preconditions.checkArgument;

@@ -12,20 +12,16 @@ import com.mongodb.MongoClient;
 import com.mongodb.ReadConcern;
 import com.mongodb.WriteConcern;
 import com.mongodb.client.MongoDatabase;
-
 import fr.inria.atlanmod.neoemf.data.AbstractBackendFactory;
 import fr.inria.atlanmod.neoemf.data.Backend;
 import fr.inria.atlanmod.neoemf.data.BackendFactory;
 import fr.inria.atlanmod.neoemf.data.mongodb.config.MongoDbConfig;
-
 import org.bson.codecs.configuration.CodecRegistry;
 import org.bson.codecs.pojo.PojoCodecProvider;
-import org.osgi.service.component.annotations.Component;
-
-import java.net.URL;
 
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.net.URL;
 
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
@@ -33,7 +29,7 @@ import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 /**
  * A {@link BackendFactory} that creates {@link MongoDbBackend} instances.
  */
-@Component(service = BackendFactory.class)
+
 @ParametersAreNonnullByDefault
 public class MongoDbBackendFactory extends AbstractBackendFactory<MongoDbConfig> {
 

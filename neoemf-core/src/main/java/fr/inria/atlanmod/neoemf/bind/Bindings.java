@@ -10,7 +10,6 @@ package fr.inria.atlanmod.neoemf.bind;
 
 import fr.inria.atlanmod.neoemf.data.BackendFactory;
 import fr.inria.atlanmod.neoemf.util.UriFactory;
-
 import org.atlanmod.commons.Throwables;
 import org.atlanmod.commons.annotation.Static;
 import org.atlanmod.commons.reflect.MoreReflection;
@@ -18,16 +17,15 @@ import org.atlanmod.commons.reflect.ReflectionException;
 import org.atlanmod.commons.service.ServiceDefinition;
 import org.atlanmod.commons.service.ServiceProvider;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
 
 import static org.atlanmod.commons.Preconditions.checkNotNull;
 

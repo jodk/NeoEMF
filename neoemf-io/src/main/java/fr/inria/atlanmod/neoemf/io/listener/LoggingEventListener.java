@@ -9,18 +9,16 @@
 package fr.inria.atlanmod.neoemf.io.listener;
 
 import fr.inria.atlanmod.neoemf.core.Id;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyElement;
 import fr.inria.atlanmod.neoemf.io.proxy.ProxyAttribute;
+import fr.inria.atlanmod.neoemf.io.proxy.ProxyElement;
 import fr.inria.atlanmod.neoemf.io.proxy.ProxyReference;
-
 import org.atlanmod.commons.log.Level;
 import org.atlanmod.commons.log.Log;
 import org.atlanmod.commons.primitive.Strings;
 
-import java.util.Objects;
-
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Objects;
 
 /**
  * A {@link EventListener} that logs every events.

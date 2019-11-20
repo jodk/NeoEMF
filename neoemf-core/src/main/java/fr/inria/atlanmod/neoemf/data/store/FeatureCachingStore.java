@@ -13,13 +13,12 @@ import fr.inria.atlanmod.neoemf.data.bean.FeatureBean;
 import fr.inria.atlanmod.neoemf.data.bean.ManyFeatureBean;
 import fr.inria.atlanmod.neoemf.data.bean.SingleFeatureBean;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.IntStream;
-
 import javax.annotation.Nonnegative;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.IntStream;
 
 /**
  * A {@link Store} wrapper that caches {@link org.eclipse.emf.ecore.EStructuralFeature} values.

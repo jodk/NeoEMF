@@ -9,7 +9,6 @@
 package fr.inria.atlanmod.neoemf.data.mapping;
 
 import fr.inria.atlanmod.neoemf.data.Saveable;
-
 import org.atlanmod.commons.Copiable;
 
 import javax.annotation.ParametersAreNonnullByDefault;

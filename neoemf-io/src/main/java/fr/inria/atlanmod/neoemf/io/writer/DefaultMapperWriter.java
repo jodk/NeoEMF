@@ -12,18 +12,13 @@ import fr.inria.atlanmod.neoemf.core.Id;
 import fr.inria.atlanmod.neoemf.data.bean.ClassBean;
 import fr.inria.atlanmod.neoemf.data.bean.SingleFeatureBean;
 import fr.inria.atlanmod.neoemf.data.mapping.DataMapper;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyElement;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyAttribute;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyClass;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyReference;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyValue;
+import fr.inria.atlanmod.neoemf.io.proxy.*;
 import fr.inria.atlanmod.neoemf.resource.PersistentResource;
 
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
-
-import javax.annotation.ParametersAreNonnullByDefault;
 
 import static org.atlanmod.commons.Preconditions.checkState;
 

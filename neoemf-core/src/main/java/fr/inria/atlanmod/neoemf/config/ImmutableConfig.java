@@ -11,6 +11,8 @@ package fr.inria.atlanmod.neoemf.config;
 import fr.inria.atlanmod.neoemf.data.store.ReadOnlyStore;
 import fr.inria.atlanmod.neoemf.data.store.Store;
 
+import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Collections;
@@ -19,9 +21,6 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-
-import javax.annotation.Nonnull;
-import javax.annotation.ParametersAreNonnullByDefault;
 
 /**
  * An immutable configuration that defines the behavior of {@link fr.inria.atlanmod.neoemf.data.BackendFactory

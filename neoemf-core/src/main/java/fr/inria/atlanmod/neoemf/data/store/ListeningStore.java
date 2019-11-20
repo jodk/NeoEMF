@@ -17,9 +17,12 @@ import fr.inria.atlanmod.neoemf.data.store.listener.BackendReport;
 import fr.inria.atlanmod.neoemf.data.store.listener.FailureCallReport;
 import fr.inria.atlanmod.neoemf.data.store.listener.StoreListener;
 import fr.inria.atlanmod.neoemf.data.store.listener.SuccessCallReport;
-
 import org.atlanmod.commons.Lazy;
 
+import javax.annotation.Nonnegative;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -30,11 +33,6 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
-import javax.annotation.Nonnegative;
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
 
 /**
  * An {@link Store} that listen calls made on this store chain and notify defined {@link StoreListener}s.

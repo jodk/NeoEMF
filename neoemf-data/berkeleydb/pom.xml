@@ -10,7 +10,7 @@
 
     <artifactId>neoemf-data-berkeleydb</artifactId>
 
-    <packaging>bundle</packaging>
+    <packaging>jar</packaging>
 
     <name>NeoEMF Data BerkeleyDB</name>
     <description>BerkeleyDB extension of the core component.</description>
@@ -45,26 +45,7 @@
     </dependencyManagement>
 
     <build>
-        <plugins>
 
-            <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <configuration>
-                    <instructions>
-                        <Bundle-SymbolicName>${project.groupId}.data.berkeleydb</Bundle-SymbolicName>
-                        <Export-Package>
-                            !fr.inria.atlanmod.neoemf.data.berkeleydb.*.internal.*,
-                            fr.inria.atlanmod.neoemf.data.berkeleydb.*
-                        </Export-Package>
-                        <Require-Bundle>
-                            ${project.groupId}.core
-                        </Require-Bundle>
-                    </instructions>
-                </configuration>
-            </plugin>
-
-        </plugins>
     </build>
 
 </project>

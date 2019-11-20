@@ -11,11 +11,10 @@ package fr.inria.atlanmod.neoemf.core;
 import fr.inria.atlanmod.neoemf.core.internal.LongIdProvider;
 import fr.inria.atlanmod.neoemf.core.internal.UndefinedId;
 
-import java.io.Serializable;
-
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 import javax.annotation.concurrent.Immutable;
+import java.io.Serializable;
 
 /**
  * An identifier used to identify {@link PersistentEObject}s in datastores.

@@ -10,10 +10,9 @@ package fr.inria.atlanmod.neoemf.io.reader;
 
 import fr.inria.atlanmod.neoemf.io.Notifier;
 
-import java.io.IOException;
-
 import javax.annotation.ParametersAreNonnullByDefault;
 import javax.annotation.WillNotClose;
+import java.io.IOException;
 
 /**
  * A {@link fr.inria.atlanmod.neoemf.io.Notifier} able to read data from an {@link Object}.

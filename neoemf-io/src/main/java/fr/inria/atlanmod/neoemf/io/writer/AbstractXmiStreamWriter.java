@@ -10,19 +10,16 @@ package fr.inria.atlanmod.neoemf.io.writer;
 
 import fr.inria.atlanmod.neoemf.core.Id;
 import fr.inria.atlanmod.neoemf.io.processor.ValueConverter;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyElement;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyAttribute;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyClass;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyPackage;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyReference;
+import fr.inria.atlanmod.neoemf.io.proxy.*;
 import fr.inria.atlanmod.neoemf.io.util.XmiConstants;
-
 import org.atlanmod.commons.annotation.Beta;
 import org.atlanmod.commons.primitive.Strings;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayDeque;
@@ -30,15 +27,7 @@ import java.util.Deque;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import javax.annotation.Nonnull;
-import javax.annotation.ParametersAreNonnullByDefault;
-
-import static fr.inria.atlanmod.neoemf.io.util.XmiConstants.XMI_ID;
-import static fr.inria.atlanmod.neoemf.io.util.XmiConstants.XMI_NS;
-import static fr.inria.atlanmod.neoemf.io.util.XmiConstants.XMI_TYPE;
-import static fr.inria.atlanmod.neoemf.io.util.XmiConstants.XMI_URI;
-import static fr.inria.atlanmod.neoemf.io.util.XmiConstants.XMI_VERSION;
-import static fr.inria.atlanmod.neoemf.io.util.XmiConstants.XMI_VERSION_ATTR;
+import static fr.inria.atlanmod.neoemf.io.util.XmiConstants.*;
 
 /**
  * An {@link AbstractStreamWriter} that writes data into an XMI file.

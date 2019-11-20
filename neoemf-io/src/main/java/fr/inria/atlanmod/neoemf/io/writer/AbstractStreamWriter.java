@@ -10,9 +10,8 @@ package fr.inria.atlanmod.neoemf.io.writer;
 
 import org.atlanmod.commons.annotation.Beta;
 
-import java.io.OutputStream;
-
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.io.OutputStream;
 
 /**
  * A abstract {@link Writer} that writes data into a {@link OutputStream}.

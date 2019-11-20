@@ -9,7 +9,6 @@
 package fr.inria.atlanmod.neoemf.io.proxy;
 
 import fr.inria.atlanmod.neoemf.core.Id;
-
 import org.eclipse.emf.ecore.EReference;
 
 import javax.annotation.Nonnull;

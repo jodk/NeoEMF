@@ -12,25 +12,20 @@ import com.tinkerpop.blueprints.Graph;
 import com.tinkerpop.blueprints.GraphFactory;
 import com.tinkerpop.blueprints.KeyIndexableGraph;
 import com.tinkerpop.blueprints.util.wrappers.readonly.ReadOnlyKeyIndexableGraph;
-
 import fr.inria.atlanmod.neoemf.data.AbstractBackendFactory;
 import fr.inria.atlanmod.neoemf.data.Backend;
-import fr.inria.atlanmod.neoemf.data.BackendFactory;
 import fr.inria.atlanmod.neoemf.data.blueprints.config.BaseBlueprintsConfig;
-
-import org.osgi.service.component.annotations.Component;
-
-import java.nio.file.Path;
 
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.nio.file.Path;
 
 import static org.atlanmod.commons.Preconditions.checkArgument;
 
 /**
  * A {@link fr.inria.atlanmod.neoemf.data.BackendFactory} that creates {@link BlueprintsBackend} instances.
  */
-@Component(service = BackendFactory.class)
+
 @ParametersAreNonnullByDefault
 public class BlueprintsBackendFactory extends AbstractBackendFactory<BaseBlueprintsConfig<?>> {
 

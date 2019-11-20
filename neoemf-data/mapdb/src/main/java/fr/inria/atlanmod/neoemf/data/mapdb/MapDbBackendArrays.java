@@ -9,7 +9,6 @@
 package fr.inria.atlanmod.neoemf.data.mapdb;
 
 import fr.inria.atlanmod.neoemf.data.mapping.ManyValueWithArrays;
-
 import org.mapdb.DB;
 
 import javax.annotation.ParametersAreNonnullByDefault;

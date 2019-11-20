@@ -9,15 +9,9 @@
 package fr.inria.atlanmod.neoemf.io.reader;
 
 import com.ctc.wstx.api.WstxInputProperties;
-
 import fr.inria.atlanmod.neoemf.io.util.XmiConstants;
-
 import org.atlanmod.commons.primitive.Strings;
 import org.codehaus.stax2.XMLInputFactory2;
-
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 
 import javax.annotation.Nonnegative;
 import javax.annotation.Nonnull;
@@ -27,10 +21,11 @@ import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
-import static javax.xml.stream.XMLStreamConstants.CHARACTERS;
-import static javax.xml.stream.XMLStreamConstants.END_ELEMENT;
-import static javax.xml.stream.XMLStreamConstants.START_ELEMENT;
+import static javax.xml.stream.XMLStreamConstants.*;
 import static org.atlanmod.commons.Preconditions.checkState;
 
 /**

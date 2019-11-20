@@ -11,11 +11,7 @@ package fr.inria.atlanmod.neoemf.core;
 import fr.inria.atlanmod.neoemf.config.BaseConfig;
 import fr.inria.atlanmod.neoemf.config.ImmutableConfig;
 import fr.inria.atlanmod.neoemf.core.internal.ContentsCopier;
-import fr.inria.atlanmod.neoemf.core.internal.collect.AllContentsIterator;
-import fr.inria.atlanmod.neoemf.core.internal.collect.ContentsList;
-import fr.inria.atlanmod.neoemf.core.internal.collect.DirectStoreFeatureMap;
-import fr.inria.atlanmod.neoemf.core.internal.collect.DirectStoreList;
-import fr.inria.atlanmod.neoemf.core.internal.collect.DirectStoreMap;
+import fr.inria.atlanmod.neoemf.core.internal.collect.*;
 import fr.inria.atlanmod.neoemf.data.Backend;
 import fr.inria.atlanmod.neoemf.data.im.BoundInMemoryBackend;
 import fr.inria.atlanmod.neoemf.data.store.Store;
@@ -23,7 +19,6 @@ import fr.inria.atlanmod.neoemf.data.store.StoreFactory;
 import fr.inria.atlanmod.neoemf.data.store.adapter.StoreAdapter;
 import fr.inria.atlanmod.neoemf.data.store.adapter.TransientStoreAdapter;
 import fr.inria.atlanmod.neoemf.resource.PersistentResource;
-
 import org.atlanmod.commons.Lazy;
 import org.atlanmod.commons.LazyReference;
 import org.atlanmod.commons.annotation.VisibleForTesting;
@@ -37,13 +32,12 @@ import org.eclipse.emf.ecore.impl.MinimalEStoreEObjectImpl;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.FeatureMapUtil;
 
-import java.util.Collection;
-import java.util.Objects;
-import java.util.Optional;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Collection;
+import java.util.Objects;
+import java.util.Optional;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;

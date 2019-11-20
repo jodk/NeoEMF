@@ -10,12 +10,11 @@ package fr.inria.atlanmod.neoemf.util;
 
 import org.eclipse.emf.common.util.URI;
 
-import java.io.File;
-import java.util.Objects;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.io.File;
+import java.util.Objects;
 
 import static java.util.Objects.nonNull;
 

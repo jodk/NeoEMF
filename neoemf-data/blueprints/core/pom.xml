@@ -10,7 +10,7 @@
 
     <artifactId>neoemf-data-blueprints-core</artifactId>
 
-    <packaging>bundle</packaging>
+    <packaging>jar</packaging>
 
     <name>NeoEMF Data Blueprints Core</name>
     <description>
@@ -32,13 +32,6 @@
             <artifactId>commons-configuration</artifactId>
         </dependency>
 
-        <!-- Test -->
-
-        <dependency>
-            <groupId>org.eclipse.emf</groupId>
-            <artifactId>org.eclipse.emf.ecore</artifactId>
-            <scope>test</scope>
-        </dependency>
 
     </dependencies>
 
@@ -63,34 +56,7 @@
     </dependencyManagement>
 
     <build>
-        <plugins>
 
-            <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <configuration>
-                    <instructions>
-                        <Bundle-SymbolicName>${project.groupId}.data.blueprints.core</Bundle-SymbolicName>
-                        <DynamicImport-Package>
-                            com.tinkerpop.blueprints.impls.*;version="${blueprints.version}"
-                        </DynamicImport-Package>
-                        <Export-Package>
-                            !fr.inria.atlanmod.neoemf.data.blueprints.*.internal.*,
-                            fr.inria.atlanmod.neoemf.data.blueprints.*
-                        </Export-Package>
-                        <_exportcontents>
-                            com.tinkerpop.blueprints;version="${blueprints.version}",
-                            com.tinkerpop.blueprints.util;version="${blueprints.version}",
-                            org.apache.commons.configuration;version="${commons-configuration.version}"
-                        </_exportcontents>
-                        <Require-Bundle>
-                            ${project.groupId}.core
-                        </Require-Bundle>
-                    </instructions>
-                </configuration>
-            </plugin>
-
-        </plugins>
     </build>
 
 </project>

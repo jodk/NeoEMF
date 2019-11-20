@@ -9,11 +9,8 @@
 package fr.inria.atlanmod.neoemf.io;
 
 import fr.inria.atlanmod.neoemf.data.mapping.DataMapper;
-import fr.inria.atlanmod.neoemf.io.listener.CountingEventListener;
 import fr.inria.atlanmod.neoemf.io.listener.EventListener;
-import fr.inria.atlanmod.neoemf.io.listener.LoggingEventListener;
-import fr.inria.atlanmod.neoemf.io.listener.ProgressEventListener;
-import fr.inria.atlanmod.neoemf.io.listener.TimerEventListener;
+import fr.inria.atlanmod.neoemf.io.listener.*;
 import fr.inria.atlanmod.neoemf.io.processor.NoopProcessor;
 import fr.inria.atlanmod.neoemf.io.processor.Processor;
 import fr.inria.atlanmod.neoemf.io.reader.AbstractReader;
@@ -23,39 +20,23 @@ import fr.inria.atlanmod.neoemf.io.reader.XmiStreamReader;
 import fr.inria.atlanmod.neoemf.io.writer.DefaultMapperWriter;
 import fr.inria.atlanmod.neoemf.io.writer.Writer;
 import fr.inria.atlanmod.neoemf.io.writer.XmiStreamWriter;
-
 import org.atlanmod.commons.annotation.VisibleForTesting;
 import org.atlanmod.commons.log.Level;
 import org.atlanmod.commons.log.Log;
 
-import java.io.Closeable;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.PushbackInputStream;
+import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
+import javax.annotation.WillNotClose;
+import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
-import javax.annotation.Nonnull;
-import javax.annotation.ParametersAreNonnullByDefault;
-import javax.annotation.WillNotClose;
-
 import static java.util.Objects.nonNull;
-import static org.atlanmod.commons.Preconditions.checkArgument;
-import static org.atlanmod.commons.Preconditions.checkNotNull;
-import static org.atlanmod.commons.Preconditions.checkState;
+import static org.atlanmod.commons.Preconditions.*;
 
 /**
  * The builder that creates {@link fr.inria.atlanmod.neoemf.io.reader.Reader} and {@link

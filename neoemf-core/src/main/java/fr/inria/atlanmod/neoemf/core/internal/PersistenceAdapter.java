@@ -9,11 +9,9 @@
 package fr.inria.atlanmod.neoemf.core.internal;
 
 import fr.inria.atlanmod.neoemf.core.PersistentEObject;
-
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
-
 import org.atlanmod.commons.annotation.Singleton;
 import org.atlanmod.commons.annotation.Static;
 import org.atlanmod.commons.cache.Cache;
@@ -22,15 +20,14 @@ import org.atlanmod.commons.log.Log;
 import org.atlanmod.commons.reflect.MoreReflection;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.Set;
 import java.util.stream.Collectors;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
 
 import static java.util.Objects.nonNull;
 import static org.atlanmod.commons.Preconditions.checkArgument;

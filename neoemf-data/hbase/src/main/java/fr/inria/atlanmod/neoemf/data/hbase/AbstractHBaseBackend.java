@@ -15,25 +15,19 @@ import fr.inria.atlanmod.neoemf.data.DatabaseException;
 import fr.inria.atlanmod.neoemf.data.bean.ClassBean;
 import fr.inria.atlanmod.neoemf.data.bean.SingleFeatureBean;
 import fr.inria.atlanmod.neoemf.data.bean.serializer.BeanSerializerFactory;
-
-import org.apache.hadoop.hbase.client.Delete;
-import org.apache.hadoop.hbase.client.Get;
-import org.apache.hadoop.hbase.client.Put;
-import org.apache.hadoop.hbase.client.Result;
-import org.apache.hadoop.hbase.client.Table;
+import org.apache.hadoop.hbase.client.*;
 import org.atlanmod.commons.function.Converter;
 import org.atlanmod.commons.io.serializer.BinarySerializer;
 import org.atlanmod.commons.primitive.Bytes;
 import org.atlanmod.commons.primitive.Ints;
 import org.atlanmod.commons.primitive.Strings;
 
+import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.io.IOException;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Stream;
-
-import javax.annotation.Nonnull;
-import javax.annotation.ParametersAreNonnullByDefault;
 
 import static java.util.Objects.isNull;
 import static org.atlanmod.commons.Preconditions.checkNotNull;

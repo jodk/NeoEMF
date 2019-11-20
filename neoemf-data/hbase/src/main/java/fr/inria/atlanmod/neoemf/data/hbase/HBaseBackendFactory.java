@@ -10,9 +10,7 @@ package fr.inria.atlanmod.neoemf.data.hbase;
 
 import fr.inria.atlanmod.neoemf.data.AbstractBackendFactory;
 import fr.inria.atlanmod.neoemf.data.Backend;
-import fr.inria.atlanmod.neoemf.data.BackendFactory;
 import fr.inria.atlanmod.neoemf.data.hbase.config.HBaseConfig;
-
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
 import org.apache.hadoop.hbase.HColumnDescriptor;
@@ -22,13 +20,11 @@ import org.apache.hadoop.hbase.client.Admin;
 import org.apache.hadoop.hbase.client.Connection;
 import org.apache.hadoop.hbase.client.ConnectionFactory;
 import org.apache.hadoop.hbase.client.Table;
-import org.osgi.service.component.annotations.Component;
-
-import java.io.IOException;
-import java.net.URL;
 
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.io.IOException;
+import java.net.URL;
 
 /**
  * A {@link fr.inria.atlanmod.neoemf.data.BackendFactory} that creates {@link HBaseBackend} instances.
@@ -37,7 +33,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
  * ones. This is a limitation that will be solved in next releases. To avoid any consistency issue we recommend every
  * HBase resource right after their creation, ensuring the resource is using a persistent back-end.
  */
-@Component(service = BackendFactory.class)
+
 @ParametersAreNonnullByDefault
 public class HBaseBackendFactory extends AbstractBackendFactory<HBaseConfig> {
 

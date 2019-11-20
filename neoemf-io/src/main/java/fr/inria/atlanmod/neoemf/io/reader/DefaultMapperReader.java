@@ -13,32 +13,21 @@ import fr.inria.atlanmod.neoemf.data.bean.AbstractFeatureBean;
 import fr.inria.atlanmod.neoemf.data.bean.ClassBean;
 import fr.inria.atlanmod.neoemf.data.bean.SingleFeatureBean;
 import fr.inria.atlanmod.neoemf.data.mapping.DataMapper;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyElement;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyAttribute;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyClass;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyReference;
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyValue;
+import fr.inria.atlanmod.neoemf.io.proxy.*;
 import fr.inria.atlanmod.neoemf.resource.PersistentResource;
 import fr.inria.atlanmod.neoemf.util.EFeatures;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.FeatureMapUtil;
 
-import java.io.IOException;
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Deque;
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.io.IOException;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * The default implementation of a {@link Reader} that reads data from a {@link fr.inria.atlanmod.neoemf.data.mapping.DataMapper}.

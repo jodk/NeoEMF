@@ -8,8 +8,8 @@
 
 package fr.inria.atlanmod.neoemf.io.listener;
 
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyElement;
 import fr.inria.atlanmod.neoemf.io.proxy.ProxyAttribute;
+import fr.inria.atlanmod.neoemf.io.proxy.ProxyElement;
 import fr.inria.atlanmod.neoemf.io.proxy.ProxyReference;
 
 import javax.annotation.ParametersAreNonnullByDefault;

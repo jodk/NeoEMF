@@ -10,17 +10,15 @@ package fr.inria.atlanmod.neoemf.data.bean.serializer;
 
 import fr.inria.atlanmod.neoemf.core.Id;
 import fr.inria.atlanmod.neoemf.data.bean.ManyFeatureBean;
-
 import org.atlanmod.commons.io.serializer.AbstractBinarySerializer;
 import org.atlanmod.commons.io.serializer.BinarySerializer;
-
-import java.io.DataInput;
-import java.io.DataOutput;
-import java.io.IOException;
 
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 import javax.annotation.WillNotClose;
+import java.io.DataInput;
+import java.io.DataOutput;
+import java.io.IOException;
 
 /**
  * A {@link BinarySerializer} for {@link ManyFeatureBean}s.

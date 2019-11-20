@@ -10,16 +10,11 @@ package fr.inria.atlanmod.neoemf.io.processor;
 
 import org.atlanmod.commons.primitive.Strings;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.NoSuchElementException;
-import java.util.concurrent.atomic.AtomicInteger;
-
 import javax.annotation.Nonnegative;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import static fr.inria.atlanmod.neoemf.io.util.XPathConstants.INDEX_SEPARATOR;
 import static fr.inria.atlanmod.neoemf.io.util.XPathConstants.START_ELT;

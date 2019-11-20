@@ -9,29 +9,24 @@
 package fr.inria.atlanmod.neoemf.data.blueprints;
 
 import com.tinkerpop.blueprints.KeyIndexableGraph;
-
 import fr.inria.atlanmod.neoemf.core.Id;
 import fr.inria.atlanmod.neoemf.data.bean.ManyFeatureBean;
 import fr.inria.atlanmod.neoemf.data.bean.SingleFeatureBean;
 import fr.inria.atlanmod.neoemf.data.blueprints.internal.graph.ElementEdge;
 import fr.inria.atlanmod.neoemf.data.blueprints.internal.graph.ElementVertex;
-
 import org.atlanmod.commons.collect.MoreIterables;
 import org.atlanmod.commons.collect.MoreStreams;
 
+import javax.annotation.Nonnegative;
+import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-import javax.annotation.Nonnegative;
-import javax.annotation.Nonnull;
-import javax.annotation.ParametersAreNonnullByDefault;
-
-import static org.atlanmod.commons.Preconditions.checkNotContainsNull;
-import static org.atlanmod.commons.Preconditions.checkNotNull;
-import static org.atlanmod.commons.Preconditions.checkPositionIndex;
+import static org.atlanmod.commons.Preconditions.*;
 
 /**
  * The default {@link BlueprintsBackend} mapping.

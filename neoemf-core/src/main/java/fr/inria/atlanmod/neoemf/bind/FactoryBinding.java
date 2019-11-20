@@ -10,13 +10,8 @@ package fr.inria.atlanmod.neoemf.bind;
 
 import fr.inria.atlanmod.neoemf.data.BackendFactory;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Inherited;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
-
 import javax.annotation.Nonnull;
+import java.lang.annotation.*;
 
 /**
  * Annotates an element that is bound to a {@link fr.inria.atlanmod.neoemf.data.BackendFactory}.

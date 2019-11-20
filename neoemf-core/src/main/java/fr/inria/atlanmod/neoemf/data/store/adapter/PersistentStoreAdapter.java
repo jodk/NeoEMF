@@ -12,7 +12,6 @@ import fr.inria.atlanmod.neoemf.core.Id;
 import fr.inria.atlanmod.neoemf.core.PersistentEObject;
 import fr.inria.atlanmod.neoemf.data.store.Store;
 import fr.inria.atlanmod.neoemf.resource.PersistentResource;
-
 import org.atlanmod.commons.cache.Cache;
 
 import javax.annotation.Nonnull;

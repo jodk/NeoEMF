@@ -8,13 +8,12 @@
 
 package fr.inria.atlanmod.neoemf.io;
 
-import fr.inria.atlanmod.neoemf.io.proxy.ProxyElement;
 import fr.inria.atlanmod.neoemf.io.proxy.ProxyAttribute;
+import fr.inria.atlanmod.neoemf.io.proxy.ProxyElement;
 import fr.inria.atlanmod.neoemf.io.proxy.ProxyReference;
 
-import java.io.IOException;
-
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.io.IOException;
 
 /**
  * An object that notifies registered {@link Handler}s of events during an I/O process.

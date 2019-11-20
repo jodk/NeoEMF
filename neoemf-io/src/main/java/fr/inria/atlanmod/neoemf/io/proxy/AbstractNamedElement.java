@@ -8,11 +8,10 @@
 
 package fr.inria.atlanmod.neoemf.io.proxy;
 
-import java.util.Objects;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Objects;
 
 /**
  * A simple element that has a name.

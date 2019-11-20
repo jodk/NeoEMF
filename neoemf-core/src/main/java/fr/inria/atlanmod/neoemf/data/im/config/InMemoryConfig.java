@@ -10,15 +10,10 @@ package fr.inria.atlanmod.neoemf.data.im.config;
 
 import fr.inria.atlanmod.neoemf.bind.FactoryBinding;
 import fr.inria.atlanmod.neoemf.config.BaseConfig;
-import fr.inria.atlanmod.neoemf.config.Config;
 import fr.inria.atlanmod.neoemf.data.im.InMemoryBackendFactory;
 
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.ServiceScope;
-
-import java.nio.file.Path;
-
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.nio.file.Path;
 
 /**
  * A {@link fr.inria.atlanmod.neoemf.config.Config} that creates specific configuration for an {@link
@@ -26,7 +21,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
  * <p>
  * All features are all optional: configuration can be created using all or none of them.
  */
-@Component(service = Config.class, scope = ServiceScope.PROTOTYPE)
+
 @FactoryBinding(factory = InMemoryBackendFactory.class)
 @ParametersAreNonnullByDefault
 public class InMemoryConfig extends BaseConfig<InMemoryConfig> {

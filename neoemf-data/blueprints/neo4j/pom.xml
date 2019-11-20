@@ -10,22 +10,10 @@
 
     <artifactId>neoemf-data-blueprints-neo4j</artifactId>
 
-    <packaging>bundle</packaging>
+    <packaging>jar</packaging>
 
     <name>NeoEMF Data Blueprints Neo4j</name>
     <description>Blueprints extension of the core component, using Neo4j2.</description>
-
-    <licenses>
-        <license>
-            <name>Eclipse Public License v2.0</name>
-            <url>https://www.eclipse.org/legal/epl-2.0/</url>
-            <comments>
-                This Source Code may also be made available under the following Secondary Licenses when the conditions
-                for such availability set forth in the Eclipse Public License, v. 2.0 are satisfied: GNU General Public
-                License, version 3.
-            </comments>
-        </license>
-    </licenses>
 
     <properties>
         <neo4j.version>2.1.8</neo4j.version><!-- 2.2.0+ : no longer use `javax.transaction` -->
@@ -65,13 +53,6 @@
             <version>${project.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>fr.inria.atlanmod.neoemf</groupId>
-            <artifactId>neoemf-data-blueprints-core</artifactId>
-            <version>${project.version}</version>
-            <type>test-jar</type>
-            <scope>test</scope>
-        </dependency>
 
     </dependencies>
 
@@ -129,34 +110,7 @@
     </dependencyManagement>
 
     <build>
-        <plugins>
 
-            <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <configuration>
-                    <instructions>
-                        <Bundle-SymbolicName>${project.groupId}.data.blueprints.neo4j</Bundle-SymbolicName>
-                        <Import-Package>
-                            com.tinkerpop.blueprints.*;version="${blueprints.version}",
-                            org.apache.commons.configuration;version="${commons-configuration.version}"
-                        </Import-Package>
-                        <Export-Package>
-                            !fr.inria.atlanmod.neoemf.data.blueprints.neo4j.*.internal.*,
-                            fr.inria.atlanmod.neoemf.data.blueprints.neo4j.*
-                        </Export-Package>
-                        <_exportcontents>
-                            com.tinkerpop.blueprints.impls.neo4j2;version="${blueprints.version}"
-                        </_exportcontents>
-                        <Require-Bundle>
-                            ${project.groupId}.core;visibility:=reexport,
-                            ${project.groupId}.data.blueprints.core
-                        </Require-Bundle>
-                    </instructions>
-                </configuration>
-            </plugin>
-
-        </plugins>
     </build>
 
 </project>

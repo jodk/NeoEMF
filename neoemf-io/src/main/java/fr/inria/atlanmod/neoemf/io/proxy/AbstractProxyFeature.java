@@ -9,14 +9,12 @@
 package fr.inria.atlanmod.neoemf.io.proxy;
 
 import fr.inria.atlanmod.neoemf.core.Id;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
-import java.util.Objects;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Objects;
 
 import static org.atlanmod.commons.Preconditions.checkNotNull;
 

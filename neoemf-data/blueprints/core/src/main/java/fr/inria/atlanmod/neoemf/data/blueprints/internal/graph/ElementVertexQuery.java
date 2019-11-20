@@ -9,7 +9,6 @@
 package fr.inria.atlanmod.neoemf.data.blueprints.internal.graph;
 
 import com.tinkerpop.blueprints.VertexQuery;
-
 import fr.inria.atlanmod.neoemf.data.blueprints.internal.graph.wrapper.IdVertexQuery;
 
 import javax.annotation.Nonnull;

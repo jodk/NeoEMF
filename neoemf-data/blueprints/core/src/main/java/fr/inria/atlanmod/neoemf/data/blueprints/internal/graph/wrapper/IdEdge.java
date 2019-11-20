@@ -13,10 +13,9 @@ import com.tinkerpop.blueprints.Edge;
 import com.tinkerpop.blueprints.Vertex;
 import com.tinkerpop.blueprints.util.StringFactory;
 
-import java.util.function.BiFunction;
-
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.function.BiFunction;
 
 /**
  * An {@link Edge} able to map the result of each method call to a dedicated implementation.

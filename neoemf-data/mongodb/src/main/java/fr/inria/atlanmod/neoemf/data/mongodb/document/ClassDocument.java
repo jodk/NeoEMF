@@ -10,7 +10,6 @@ package fr.inria.atlanmod.neoemf.data.mongodb.document;
 
 import fr.inria.atlanmod.neoemf.data.bean.ClassBean;
 import fr.inria.atlanmod.neoemf.data.bean.SingleFeatureBean;
-
 import org.bson.codecs.pojo.annotations.BsonProperty;
 
 import javax.annotation.Nonnull;
