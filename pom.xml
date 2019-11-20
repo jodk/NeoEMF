@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -48,10 +48,7 @@
         <module>neoemf-core</module>
         <module>neoemf-data</module>
         <module>neoemf-io</module>
-        <module>neoemf-utils</module>
-        <module>neoemf-utils/p2</module>
-        <module>neoemf-tests</module>
-    </modules>
+  </modules>
 
     <developers>
         <developer>
@@ -66,7 +63,7 @@
         </developer>
 
         <developer>
-            <name>Gerson Sunyé</name>
+            <name>Gerson Suny��</name>
             <id>gerson.sunye</id>
             <email>gerson.sunye@gmail.com</email>
             <roles>
@@ -88,7 +85,7 @@
         </developer>
 
         <developer>
-            <name>Abel Gómez</name>
+            <name>Abel G��mez</name>
             <id>abel.gomez</id>
             <email>abel.gomez-llana@inria.fr</email>
             <roles>
@@ -200,8 +197,9 @@
                                 2.0.1.${maven.build.timestamp}
                             </Bundle-Version>
                             <Bundle-ClassPath>.,{maven-dependencies}</Bundle-ClassPath>
-                            <Import-Package />
-                            <Embed-Dependency><!-- Inherited -->
+                            <Import-Package/>
+                            <Embed-Dependency>
+                <!-- Inherited -->
                                 *;
                                 scope=compile|runtime;
                                 type=!pom;
