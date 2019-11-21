@@ -37,7 +37,7 @@ public class BlueprintsTinkerConfig extends BaseBlueprintsConfig<BlueprintsTinke
      */
     public BlueprintsTinkerConfig() {
         setGraph(TinkerGraph.class);
-        setFileType(TinkerGraph.FileType.GRAPHML);
+        setFileType(TinkerGraph.FileType.GRAPHSON);
     }
 
     @Override

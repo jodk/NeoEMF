@@ -1,0 +1,25 @@
+##emf的resource创建过程？
+1、new一个自己实现的UriFactory例如BlueprintsUriFactory
+2、在new一个UriFactory时，会通过UriFactory类上的注解@FactoryBinding找到具体的BackendFactory，
+BackendFactory的name（默认需要加上前缀neo-）就是这个uri的schema
+3、创建UriFactory后，调用其中的createxxUri创建具体的uri，在调用创建方法时会使用BackendFactoryRegistry去注册所有
+记录在resources/META-INF.services/目录下的所有实现了BackendFactory的类，
+并且在BackendFactoryRegistry中保存schema->BackendFactory的映射
+还会使用：Resource.Factory.Registry.INSTANCE
+                          .getProtocolToFactoryMap()
+                          .putIfAbsent(scheme, PersistentResourceFactory.getInstance())
+将这个schema绑定到PersistentResourceFactory
+所以实际使用时获得的resource就是我们PersistentResourceFactory中创建的DefaultPersistentResource
+4、像原生的resource一样使用
+
+##resource和backend的关联关系？
+ resource -(实现者)-> DefaultPersistentResource -(包含)->
+ StoreAdapter(继承InternalEObject.EStore) -(实现者)->
+ PersistentStoreAdapter(继承AbstractStoreAdapter) -包含-> Store(继承DataMapper)-(实现者)->
+ Backend的实现类(继承DataMapper)
+
+在DefaultPersistentResource中通过BackendFactory获取具体的Backend实现并完成Backend和Store的转换
+为什么能转换是因为Store和Backend都继承于DataMapper，Backend中具体的实现都是对DataMapper接口的实现
+
+
+
